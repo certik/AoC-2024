@@ -21,7 +21,7 @@ program problem_08
     antinodes2 = antinodes ! for part 2
 
     ! identify all the unique antennas in the array:
-    unique_antennas = achar(unique(ichar(pack(array, mask=array/='.'))))
+!    unique_antennas = achar(unique(ichar(pack(array, mask=array/='.'))))
     ! process each antenna one at a time:
     do i = 1, size(unique_antennas)
         ! get all the indices of this character (this type of antenna):
