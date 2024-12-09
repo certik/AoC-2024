@@ -172,7 +172,7 @@ function read_file_to_string(filename) result(str)
     type(file_t) :: f
     integer :: istat
     print*, 'open'
-    open(newunit=f%iunit, file=filename, status='OLD', iostat=istat)
+    !open(newunit=f%iunit, file=filename, status='OLD', iostat=istat)
     !print*, 'iunit = ', f%iunit
     if (istat/=0) error stop istat
   end function open_file
