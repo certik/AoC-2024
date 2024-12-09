@@ -152,7 +152,7 @@ function read_file_to_string(filename) result(str)
     form='UNFORMATTED',access='STREAM',iostat=istat)
 
     if (istat==0) then
-        inquire(file=filename, size=filesize)
+        !inquire(file=filename, size=filesize)
         if (filesize>0) then
             allocate( character(len=filesize) :: str )
             read(iunit,pos=1,iostat=istat) str
