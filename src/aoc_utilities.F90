@@ -818,7 +818,7 @@ function read_file_to_string(filename) result(str)
                 ! have to add another chunk:
                 allocate(tmp(size(vec)+chunk_size))
                 tmp(1:size(vec)) = vec
-                call move_alloc(tmp,vec)
+                !call move_alloc(tmp,vec)
             end if
             n = n + 1
         else
@@ -835,7 +835,7 @@ function read_file_to_string(filename) result(str)
             if (allocated(tmp)) deallocate(tmp)
             allocate(tmp(n))
             tmp = vec(1:n)
-            call move_alloc(tmp,vec)
+            !call move_alloc(tmp,vec)
         end if
     end if
 
