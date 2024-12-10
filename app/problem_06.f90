@@ -59,7 +59,7 @@ do iobs = 1, size(array,1)  ! row
 end do
 write(*,*) '6b:', isum2
 
-call clk%toc('6')
+!call clk%toc('6')
 
 contains
 
